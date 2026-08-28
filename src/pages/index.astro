@@ -227,11 +227,8 @@ const logo = "/8DADBA75-A304-4EC9-88AD-F2B23FA1C219.png";
 							Call {phoneDisplay}
 						</a>
 
-						<a
-							class="button secondary"
-							href={`mailto:${email}?subject=Appointment Request`}
-						>
-							Request Appointment
+						<a class="button secondary" href="#quote-form">
+                          Request Appointment
 						</a>
 					</div>
 
@@ -240,6 +237,89 @@ const logo = "/8DADBA75-A304-4EC9-88AD-F2B23FA1C219.png";
 					</a>
 				</div>
 			</section>
+<section class="section quote-section" id="quote-form">
+  <div class="container">
+    <p class="section-label">FREE ESTIMATE</p>
+    <h2>Request a Quote or Appointment</h2>
+
+    <p class="section-intro">
+      Tell us about your vehicle and the service you need.
+      Uploading photos can help us provide a faster estimate.
+    </p>
+
+    <form class="quote-form">
+      <label>
+        Name *
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Phone Number *
+        <input type="tel" name="phone" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+
+      <label>
+        Vehicle
+        <input
+          type="text"
+          name="vehicle"
+          placeholder="Year, make and model"
+        />
+      </label>
+
+      <label>
+        Service Needed *
+        <select name="service" required>
+          <option value="">Select a service</option>
+          <option>Paintless Dent Repair</option>
+          <option>Hail Damage Repair</option>
+          <option>Minor Collision Repair</option>
+          <option>Interior / Exterior Detailing</option>
+          <option>Paint Correction / Restoration</option>
+          <option>Ceramic Coating</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Preferred Appointment Date
+        <input type="date" name="date" />
+      </label>
+
+      <label class="full-width">
+        Tell Us About Your Vehicle
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Describe the damage or service you're interested in..."
+        ></textarea>
+      </label>
+
+      <label class="full-width">
+        Vehicle Photos
+        <input
+          type="file"
+          name="photos"
+          accept="image/*"
+          multiple
+        />
+      </label>
+
+      <button type="submit" class="button primary full-width">
+        Submit Request
+      </button>
+
+      <p class="form-note">
+        Storefront location coming soon. Mobile service is currently available throughout North Texas.
+      </p>
+    </form>
+  </div>
+</section>
 		</main>
 
 		<footer>
@@ -572,7 +652,88 @@ const logo = "/8DADBA75-A304-4EC9-88AD-F2B23FA1C219.png";
     height: 170px;
   }
 }
-	@media (max-width: 800px) {
+	.quote-section {
+  background: #07111a;
+  padding: 90px 20px;
+  scroll-margin-top: 90px;
+}
+
+.quote-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+  padding: 32px;
+  background: #0b1219;
+  border: 1px solid #22303d;
+  border-radius: 16px;
+}
+
+.quote-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  font: inherit;
+  color: #ffffff;
+  background: #111a22;
+  border: 1px solid #344554;
+  border-radius: 9px;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  outline: 2px solid #1da9f5;
+  border-color: transparent;
+}
+
+.quote-form textarea {
+  resize: vertical;
+}
+
+.quote-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.quote-form button {
+  border: 0;
+  cursor: pointer;
+}
+
+.form-note {
+  grid-column: 1 / -1;
+  margin: 5px 0 0;
+  text-align: center;
+  color: #9aa7b3;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .quote-section {
+    padding: 70px 20px;
+  }
+
+  .quote-form {
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+    gap: 18px;
+  }
+
+  .quote-form .full-width {
+    grid-column: auto;
+  }
+}
+@media (max-width: 800px) {
 		nav {
 			display: none;
 		}
