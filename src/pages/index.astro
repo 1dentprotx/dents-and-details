@@ -147,7 +147,41 @@ const logo = "/8DADBA75-A304-4EC9-88AD-F2B23FA1C219.png";
 				</div>
 			</section>
 
-			<section class="why" id="about">
+		<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <p class="section-label">OUR WORK</p>
+    <h2>Real Results. Real Vehicles.</h2>
+    <p class="section-intro">
+      See examples of our paintless dent repair and professional detailing work.
+    </p>
+
+    <h3 class="gallery-title">Paintless Dent Repair</h3>
+    <div class="gallery-grid">
+      <img src="/pdr-01.jpg" alt="Paintless dent repair result" loading="lazy" />
+      <img src="/pdr-02.jpg" alt="Paintless dent repair result" loading="lazy" />
+      <video src="/pdr-video-01.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/pdr-03.jpg" alt="Paintless dent repair result" loading="lazy" />
+      <video src="/pdr-video-02.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/pdr-04.jpg" alt="Paintless dent repair result" loading="lazy" />
+      <video src="/pdr-video-03.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/pdr-05.jpg" alt="Paintless dent repair result" loading="lazy" />
+    </div>
+
+    <h3 class="gallery-title detailing-title">Professional Detailing</h3>
+    <div class="gallery-grid">
+      <img src="/detailing-01.jpg" alt="Professional automotive detailing result" loading="lazy" />
+      <img src="/detailing-02.jpg" alt="Professional automotive detailing result" loading="lazy" />
+      <video src="/detailing-video-01.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/detailing-03.jpg" alt="Professional automotive detailing result" loading="lazy" />
+      <video src="/detailing-video-02.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/detailing-04.jpg" alt="Professional automotive detailing result" loading="lazy" />
+      <video src="/detailing-video-03.mp4" controls muted playsinline preload="metadata"></video>
+      <img src="/detailing-05.jpg" alt="Professional automotive detailing result" loading="lazy" />
+    </div>
+  </div>
+</section>	
+
+<section class="why" id="about">
 				<div class="container">
 					<p class="section-label">WHY DENTS & DETAILS?</p>
 					<h2>Professional Results. Convenient Service.</h2>
@@ -477,7 +511,65 @@ const logo = "/8DADBA75-A304-4EC9-88AD-F2B23FA1C219.png";
 	footer p {
 		margin: 5px 0;
 	}
+.gallery-section {
+  background: #0b0f14;
+}
 
+.gallery-title {
+  margin: 45px 0 20px;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.detailing-title {
+  margin-top: 60px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #111820;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery-grid img,
+  .gallery-grid video {
+    height: 190px;
+    border-radius: 9px;
+  }
+
+  .gallery-title {
+    margin-top: 35px;
+    font-size: 1.35rem;
+  }
+
+  .detailing-title {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid img,
+  .gallery-grid video {
+    height: 170px;
+  }
+}
 	@media (max-width: 800px) {
 		nav {
 			display: none;
