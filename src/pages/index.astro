@@ -1,50 +1,524 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const businessName = "Dents & Details";
+const phoneDisplay = "(682) 217-7730";
+const phoneLink = "tel:+16822177730";
+const email = "1dentprotx@gmail.com";
+const logo = "/ACCC28BD-B0C0-4E48-A14D-045D8F4CE6E7.png";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Dents & Details | Mobile Dent Repair & Auto Detailing North Texas</title>
+
+		<meta
+			name="description"
+			content="Dents & Details provides mobile dent repair, hail damage repair, auto detailing, paint correction and ceramic coatings in Justin, TX and surrounding North Texas communities."
+		/>
 	</head>
+
 	<body>
-		<Header />
+		<header>
+			<div class="nav">
+				<a href="#home" class="brand">DENTS <span>&</span> DETAILS</a>
+
+				<nav>
+					<a href="#services">Services</a>
+					<a href="#about">About</a>
+					<a href="#contact">Contact</a>
+				</nav>
+
+				<a class="nav-call" href={phoneLink}>Call Now</a>
+			</div>
+		</header>
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero" id="home">
+				<div class="hero-content">
+
+					<img
+						src={logo}
+						alt="Dents & Details Mobile Dent Repair and Detailing"
+						class="logo"
+					/>
+
+					<p class="eyebrow">JUSTIN, TEXAS • SERVING NORTH TEXAS</p>
+
+					<h1>Professional Dent Repair & Auto Detailing</h1>
+
+					<p class="lead">
+						Professional mobile automotive care brought to you.
+						From dents and hail damage to paint correction,
+						detailing and ceramic coatings.
+					</p>
+
+					<div class="buttons">
+						<a class="button primary" href={phoneLink}>
+							Call {phoneDisplay}
+						</a>
+
+						<a
+							class="button secondary"
+							href={`mailto:${email}?subject=Free Quote Request`}
+						>
+							Get a Free Quote
+						</a>
+					</div>
+
+					<p class="mobile-note">
+						Mobile service available throughout North Texas
+					</p>
+				</div>
+			</section>
+
+			<section class="section" id="services">
+				<div class="container">
+					<p class="section-label">WHAT WE DO</p>
+					<h2>Complete Automotive Appearance Care</h2>
+
+					<p class="section-intro">
+						One trusted source for dent repair, detailing and
+						long-term vehicle protection.
+					</p>
+
+					<div class="services">
+						<article class="card">
+							<div class="icon">◈</div>
+							<h3>Paintless Dent Repair</h3>
+							<p>
+								Professional repair for door dings, dents and
+								minor body damage while preserving your
+								vehicle's factory finish whenever possible.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="icon">◆</div>
+							<h3>Hail Damage Repair</h3>
+							<p>
+								Restore hail-damaged panels using professional
+								PDR techniques without unnecessary painting or
+								body filler when appropriate.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="icon">✦</div>
+							<h3>Interior & Exterior Detailing</h3>
+							<p>
+								Deep-cleaning and professional detailing
+								services designed to restore your vehicle
+								inside and out.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="icon">◇</div>
+							<h3>Paint Correction</h3>
+							<p>
+								Remove or reduce oxidation, swirls and paint
+								defects to restore gloss, clarity and depth.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="icon">⬡</div>
+							<h3>Ceramic Coating</h3>
+							<p>
+								Long-lasting protection that enhances gloss
+								and helps defend your vehicle's finish against
+								the elements.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="icon">★</div>
+							<h3>Minor Collision Repair</h3>
+							<p>
+								Ask us about repair options for minor collision
+								damage and cosmetic body repairs.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="why" id="about">
+				<div class="container">
+					<p class="section-label">WHY DENTS & DETAILS?</p>
+					<h2>Professional Results. Convenient Service.</h2>
+
+					<div class="benefits">
+						<div>
+							<strong>Mobile Service</strong>
+							<p>We bring professional automotive care to you.</p>
+						</div>
+
+						<div>
+							<strong>Quality Focused</strong>
+							<p>
+								Every vehicle receives careful, professional
+								attention.
+							</p>
+						</div>
+
+						<div>
+							<strong>North Texas Local</strong>
+							<p>
+								Locally serving Justin and surrounding North
+								Texas communities.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="cta" id="contact">
+				<div class="container">
+					<p class="section-label">READY TO GET STARTED?</p>
+
+					<h2>Let's Get Your Vehicle Looking Its Best.</h2>
+
+					<p>
+						Contact Dents & Details today for a free quote or to
+						discuss the service your vehicle needs.
+					</p>
+
+					<div class="buttons center">
+						<a class="button primary" href={phoneLink}>
+							Call {phoneDisplay}
+						</a>
+
+						<a
+							class="button secondary"
+							href={`mailto:${email}?subject=Appointment Request`}
+						>
+							Request Appointment
+						</a>
+					</div>
+
+					<a class="email" href={`mailto:${email}`}>
+						{email}
+					</a>
+				</div>
+			</section>
 		</main>
-		<Footer />
+
+		<footer>
+			<strong>{businessName}</strong>
+			<p>Mobile Dent Repair • Detailing • Ceramic Coating</p>
+			<p>Serving Justin, TX & North Texas</p>
+			<p>© {new Date().getFullYear()} Dents & Details</p>
+		</footer>
 	</body>
 </html>
+
+<style>
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
+	:global(body) {
+		margin: 0;
+		background: #05070a;
+		color: #f4f7fa;
+		font-family:
+			Arial,
+			Helvetica,
+			sans-serif;
+		line-height: 1.6;
+	}
+
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background: rgba(5, 7, 10, 0.96);
+		border-bottom: 1px solid #17202b;
+	}
+
+	.nav {
+		max-width: 1150px;
+		margin: auto;
+		min-height: 70px;
+		padding: 0 22px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	.brand {
+		color: white;
+		font-weight: 900;
+		text-decoration: none;
+		letter-spacing: 1px;
+	}
+
+	.brand span,
+	.section-label {
+		color: #18a9ff;
+	}
+
+	nav {
+		display: flex;
+		gap: 25px;
+	}
+
+	nav a {
+		color: #d4dbe3;
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+
+	.nav-call {
+		background: #079bea;
+		color: white;
+		padding: 10px 17px;
+		border-radius: 7px;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.hero {
+		min-height: 730px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 80px 20px;
+		background:
+			radial-gradient(circle at 50% 20%, #062e4d 0%, transparent 38%),
+			linear-gradient(180deg, #05080c, #080d13);
+	}
+
+	.hero-content {
+		width: 100%;
+		max-width: 900px;
+	}
+
+	.logo {
+		display: block;
+		width: min(700px, 100%);
+		margin: 0 auto 35px;
+		border-radius: 18px;
+		box-shadow: 0 0 45px rgba(0, 157, 255, 0.16);
+	}
+
+	.eyebrow,
+	.section-label {
+		font-weight: 800;
+		letter-spacing: 2px;
+		font-size: 0.78rem;
+	}
+
+	h1 {
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
+		line-height: 1.05;
+		margin: 15px auto;
+		max-width: 850px;
+	}
+
+	.lead {
+		max-width: 700px;
+		margin: 20px auto 30px;
+		color: #b9c4cf;
+		font-size: 1.15rem;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		gap: 13px;
+		flex-wrap: wrap;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 14px 23px;
+		border-radius: 7px;
+		font-weight: 800;
+		text-decoration: none;
+	}
+
+	.primary {
+		background: linear-gradient(135deg, #007fd1, #16b7ff);
+		color: white;
+		box-shadow: 0 5px 24px rgba(0, 158, 255, 0.25);
+	}
+
+	.secondary {
+		border: 1px solid #4a5866;
+		color: white;
+		background: #0c1218;
+	}
+
+	.mobile-note {
+		color: #7e8d9b;
+		font-size: 0.9rem;
+		margin-top: 22px;
+	}
+
+	.section {
+		padding: 95px 20px;
+		background: #090d12;
+	}
+
+	.container {
+		max-width: 1100px;
+		margin: auto;
+	}
+
+	h2 {
+		font-size: clamp(2rem, 5vw, 3.2rem);
+		line-height: 1.1;
+		margin: 10px 0;
+	}
+
+	.section-intro {
+		color: #9da9b5;
+		max-width: 650px;
+		margin-bottom: 40px;
+	}
+
+	.services {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 18px;
+		margin-top: 35px;
+	}
+
+	.card {
+		background: linear-gradient(145deg, #0e141b, #090d12);
+		border: 1px solid #1d2b37;
+		padding: 30px;
+		border-radius: 12px;
+	}
+
+	.card h3 {
+		margin: 13px 0 8px;
+		font-size: 1.25rem;
+	}
+
+	.card p,
+	.benefits p {
+		color: #9da9b5;
+		margin-bottom: 0;
+	}
+
+	.icon {
+		color: #15adff;
+		font-size: 2rem;
+	}
+
+	.why {
+		padding: 95px 20px;
+		background:
+			linear-gradient(90deg, rgba(0, 133, 214, 0.08), transparent),
+			#05070a;
+	}
+
+	.benefits {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		margin-top: 45px;
+	}
+
+	.benefits strong {
+		font-size: 1.2rem;
+	}
+
+	.cta {
+		text-align: center;
+		padding: 100px 20px;
+		background:
+			radial-gradient(circle at center, #07304c 0%, transparent 55%),
+			#080b0f;
+	}
+
+	.cta p:not(.section-label) {
+		color: #abb6c0;
+		max-width: 650px;
+		margin: 20px auto 30px;
+	}
+
+	.center {
+		margin: 25px 0;
+	}
+
+	.email {
+		color: #35baff;
+		text-decoration: none;
+	}
+
+	footer {
+		padding: 45px 20px;
+		text-align: center;
+		background: #030405;
+		border-top: 1px solid #17202b;
+		color: #8995a0;
+		font-size: 0.9rem;
+	}
+
+	footer strong {
+		color: white;
+		font-size: 1.1rem;
+	}
+
+	footer p {
+		margin: 5px 0;
+	}
+
+	@media (max-width: 800px) {
+		nav {
+			display: none;
+		}
+
+		.services,
+		.benefits {
+			grid-template-columns: 1fr;
+		}
+
+		.hero {
+			min-height: auto;
+			padding-top: 55px;
+		}
+
+		.logo {
+			border-radius: 10px;
+		}
+
+		.section,
+		.why,
+		.cta {
+			padding: 70px 20px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.brand {
+			font-size: 0.85rem;
+		}
+
+		.nav-call {
+			font-size: 0.85rem;
+			padding: 8px 12px;
+		}
+
+		.button {
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 2.35rem;
+		}
+	}
+</style>
